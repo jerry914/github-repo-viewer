@@ -1,6 +1,7 @@
 import React,{ useState, useEffect, useCallback }  from 'react'
 import axios from "axios"
 import { useParams } from 'react-router-dom'
+import './Repo.css'
 
 const RepoData=()=>{
     const [data, setData] = useState([])
@@ -21,10 +22,10 @@ const RepoData=()=>{
     return (
         <div className="App">
         <div className="wrapper">
-            <div>{data.full_name}</div>
-            <div>{data.description}</div>
-            <div>{data.stargazers_count}</div>
-            <a href={data.svn_url}>Get hitbub</a>
+            <div className="title">{data.full_name}</div>
+            <div className="discription">{data.description}</div>
+            <div className="discription">Stargazers Count: {data.stargazers_count}</div>
+            <a className="git-link" href={data.svn_url}>View Github</a>
         </div>
         </div> 
     );

@@ -1,38 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
 .App {
   text-align: center;
+  padding: 40px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.instruct-text {
+  font-size: 24px;
+  margin: 200px 0 10px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#search-bar {
+  margin: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#search-bar input {
+  width: 300px;
+  font-size: 20px;
+  padding: 15px 10px; 
+  line-height: 28px;
+  border: none;
+  background-color: rgb(235, 235, 235);
+  border-radius: 8px 0 0 8px;
 }
-
-.App-link {
-  color: #61dafb;
+.searchButton {
+  background: #3851a1;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  height: 60px;
+  margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchButton:hover {
+  background: #4d6cd3;
+  text-decoration: none;
 }

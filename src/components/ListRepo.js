@@ -1,7 +1,7 @@
 import useFetch from "../hook/useFetch"
 import { useState, useEffect, useCallback, useRef } from "react"
 import { Link } from 'react-router-dom'
-import './ListRepo.css'
+import './Repo.css'
 
 function ListRepo() {
   const [page, setPage] = useState(1);
@@ -27,11 +27,11 @@ function ListRepo() {
   
   return (
     <div className="App">
-      <h1>{query}</h1>
+      <div className="title">{query}</div>
       <div className="list-container">
         {list.map((item, i) => (
           <div key={i}>
-            <Link to={`/users/${query}/repos/${item.name}`}>
+            <Link style={{ textDecoration: 'none', color:' #333 ',fontSize: '20px' }} to={`/users/${query}/repos/${item.name}`}>
               <div className="list-item">{i+1}. {item.name} {item.stargazers_count}</div>
             </Link>
           </div>
