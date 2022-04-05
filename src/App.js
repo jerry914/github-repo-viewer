@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './App.css';
 
-function App() {
+const App=()=>{
+  const [name,setName]=useState("");  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="wrapper">
+        <div id='search-bar'>
+          <input type="text" placeholder='Enter UserName' onChange={(e)=>{setName(e.target.value)}} />
+          <button className='searchButton'>
+          <Link to={`/users/${name}/repos`}>Search</Link>
+          </button>
+        </div>
+      </div>
+    </div> 
   );
 }
-
 export default App;
