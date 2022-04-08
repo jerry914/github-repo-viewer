@@ -14,9 +14,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/users/:username/repos" element={<ListRepo />} />
-      <Route path="/users/:username/repos/:repo" element={<RepoData />} />
+      <Route path="/github-repo-viewer/" element={<App />} />
+      <Route path="/github-repo-viewer/users/:username/repos" element={<ListRepo />} />
+      <Route path="/github-repo-viewer/users/:username/repos/:repo" element={<RepoData />} />
     </Routes>
   </BrowserRouter>
 )

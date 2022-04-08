@@ -11,7 +11,7 @@ const App=()=>{
         <div id='search-bar'>
           <input type="text" placeholder='Enter UserName' onChange={(e)=>{setName(e.target.value)}} />
           <button className='searchButton'>
-          <Link style={{ textDecoration: 'none', color:' #ffffff ',fontSize: '20px' }} to={`/users/${name}/repos`}>Search</Link>
+          <Link style={{ textDecoration: 'none', color:' #ffffff ',fontSize: '20px' }} to={`users/${name}/repos`}>Search</Link>
           </button>
         </div>
       </div>
