@@ -8,7 +8,7 @@ const RepoData=()=>{
     const params = useParams()
     const sendQuery = useCallback(async () => {
         try {
-            const res = await axios.get(`http://api.github.com/repos/${params.username}/${params.repo}`)
+            const res = await axios.get(`https://api.github.com/repos/${params.username}/${params.repo}`)
             setData(res.data)
         } catch (err) {
             console.log(err)

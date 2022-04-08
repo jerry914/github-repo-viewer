@@ -13,7 +13,7 @@ function useFetch(page) {
     try {
       setLoading(true)
       setError(false)
-      const res = await axios.get(`http://api.github.com/users/${params.username}/repos?per_page=10&page=${page}`)
+      const res = await axios.get(`https://api.github.com/users/${params.username}/repos?per_page=10&page=${page}`)
       setList((prev) => [...prev, ...res.data]);
       setLoading(false)
     } catch (err) {
